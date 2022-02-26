@@ -281,7 +281,7 @@ boottest.felm <- function(object,
   banned_fun_args <- c("contrasts", "subset")
   if (sum(call_object %in% banned_fun_args) > 0) {
     stop(paste(
-      "boottest.felm currently does not accept objects of type fixest with 
+      "boottest.felm currently does not accept objects of class felm with 
       function arguments",
       paste0(banned_fun_args[1:(length(banned_fun_args) - 1)], collapse = ", "), 
       "and", banned_fun_args[length(banned_fun_args)], "."
